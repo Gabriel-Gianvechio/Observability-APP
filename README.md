@@ -2,11 +2,12 @@
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/Gabriel-Gianvechio/Observability-APP.git
 __________________________________________________________________________
 
 2. Entre na pasta do projeto:
   cd nome-do-projeto
+****
 __________________________________________________________________________
 
 3. Instale as dependências:
