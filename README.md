@@ -1,27 +1,27 @@
 ## 🚀 Como rodar o projeto?
 
-**1. Clone o repositório:**
+1. Clone o repositório:
    ```bash
    git clone https://github.com/Gabriel-Gianvechio/Observability-APP.git
 __________________________________________________________________________
 
-**2. Entre na pasta do projeto:**
+2. Entre na pasta do projeto:
   cd nome-do-projeto
 __________________________________________________________________________
 
-**3. Instale as dependências:**
+3. Instale as dependências:
   npm install
 __________________________________________________________________________
 
-**ou, se estiver usando Yarn:**
+ou, se estiver usando Yarn:
   yarn install
 __________________________________________________________________________
 
-**4. Inicie o projeto:**
+4. Inicie o projeto:
   npm run dev
 __________________________________________________________________________
 
-**ou**
+ou
   yarn dev
 __________________________________________________________________________
 
