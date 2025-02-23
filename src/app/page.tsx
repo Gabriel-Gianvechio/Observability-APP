@@ -37,9 +37,15 @@ const ObservabilityApp: React.FC = () => {
 
       <main className="mt-16">
         {/* SECTION 1 */}
-        <section className="h-screen flex justify-center items-center bg-gray-900 text-white text-3xl font-bold text-center px-8">
-          App para estudos de observabilidade com integração de Prometheus e Grafana.
+        <section className="h-screen flex flex-col justify-center items-center bg-gray-900 text-white text-3xl font-bold text-center px-8 space-y-6">
+          <p>App para estudos de observabilidade com integração de Prometheus e Grafana.</p>
+          <div className="flex space-x-24">
+            <img src="/prometheus-logo.png" alt="prometheus" className="w-32 h-32 md:w-48 md:h-48 object-contain" />
+            <img src="/grafana-logo.png" alt="grafana" className="w-32 h-32 md:w-48 md:h-48 object-contain" />
+          </div>
         </section>
+
+
 
         {/* FORMULÁRIO DE CADASTRO */}
         <section id="register-section" className="h-screen flex justify-center items-center bg-gray-200 p-8">
