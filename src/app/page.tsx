@@ -56,7 +56,7 @@ const ObservabilityApp: React.FC = () => {
               className="space-y-4"
 
               // EVENTOS QUE ACONTECE AO CLICAR EM "CADASTRAR"
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
                 const form = e.currentTarget;
                 const formData = new FormData(e.currentTarget);
@@ -73,9 +73,28 @@ const ObservabilityApp: React.FC = () => {
                   alert("As senhas não coincidem!");
                   return;
                 }
-                console.log("Dados enviados:", values);
-                setOpen(true); //MOSTRA O POPUP
-                form.reset(); // LIMPA OS CAMPOS DO FORM
+
+                try {
+                  const response = await fetch ("http://localhost:5000/cadastrar", {
+                    method: "POST",
+                    headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify(values),
+                  });
+
+                  if(!response.ok){
+                    throw new Error("Erro ao cadastrar usuário");
+                  }
+
+                  const data = await response.json();
+                  console.log("Resposta do backend:", data);
+  
+                  console.log("Dados enviados:", values);
+                  setOpen(true); //MOSTRA O POPUP
+                  form.reset(); // LIMPA OS CAMPOS DO FORM
+                } catch (error) {
+                  console.error("Erro ao enviar dados:", error);
+                  alert ("Erro ao cadastrar usuário.");
+                }
               }}
               >
                 <Input fullWidth required type="text" name="nome" placeholder="Nome" />
